@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Our products are now available for purchase</h1>
+    <h2>Our Products</h2>
+    <h3>{% for item in data %}</h3>
+    <p>Name = {{item.name}}, price = {{item.price}}</p>
+    <h4>{% endfor %}</h4>
+
+
+</body>
+</html>

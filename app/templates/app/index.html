@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-wrap{
+            height: 200px;
+            width: 200px;
+        }
+        .img-wrap img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<h1>Our blog</h1>
+{% for message in messages %}
+<p> {{message}}</p>
+
+{% endfor %}
+
+{% for post in posts  %}
+<h3>{{post.title}}</h3>
+<div class="img-wrap">
+    <img src="{{ post.picture.url }}" alt="">
+</div>
+<a href="{% url 'read' post.id %}"><button>Read more</button></a>
+<hr>
+<br>
+{% endfor %}
+<a href="{% url 'yourblog' %}"><button>New blog</button></a>
+</body>
+</html>

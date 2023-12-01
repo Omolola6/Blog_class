@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-wrap{
+            height: 250px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .img-wrap img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <h1>{{item.title}}</h1>
+    <hr>
+    <br>
+    <div class="img-wrap">
+        <img src="{{ item.picture.url }}" alt="">
+    </div>
+    <p>{{item.body}}</p>
+    <a href="{% url 'home'%}"><button>Go home</button></a>
+    <a href="{% url 'edit' item.id %}"><button>Edit</button></a> 
+    <a href="{% url 'clear' item.id %}"><button>Delete</button></a> 
+</body>
+</html>
